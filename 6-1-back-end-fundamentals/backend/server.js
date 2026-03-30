@@ -1,16 +1,14 @@
 // TODO 1: Import Express
-import express from "express";
+const express = require("express");
+
 // TODO 2: Create the Express app and store it in a variable named app
 const app = express();
 
-
 // TODO 3: Allow React to access the server
-import cors from 'cors';
+const cors = require("cors");
 app.use(cors());
 
-
 // TODO 5: Create the home route "/"
-
 app.get('/', (req, res) => {
   res.send('Hello from the back-end server');
 });
@@ -20,9 +18,7 @@ app.get('/about', (req, res) => {
   res.send('This is the about route');
 });
 
-
 // TODO 7: Create the "/student" route
-
 app.get('/student', (req, res) => {
   res.send('This is the student route');
 });
